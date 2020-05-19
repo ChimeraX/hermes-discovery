@@ -57,7 +57,7 @@ jobs:
         chmod u+x ./kustomize
     - name: Retrieve secrets file
       run: |
-        curl -H "Authorization: token $GITHUB_TOKEN" -H "Accept: application/vnd.github.v3.raw" -o configMap.yaml -L https://api.github.com/repos/chimerax/k8s-secrets/contents/prometheus-gcp.yaml?ref=master
+        curl -H "Authorization: token $GITHUB_TOKEN" -H "Accept: application/vnd.github.v3.raw" -o configMap.yaml -L https://api.github.com/repos/chimerax/k8s-secrets/contents/hermes-discovery.yaml?ref=master
 
     - name: Deploy
       run: |
