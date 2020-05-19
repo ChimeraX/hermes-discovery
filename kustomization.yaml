@@ -1,0 +1,8 @@
+commonLabels:
+  app: hermes-discovery
+
+resources:
+- deployment.yaml
+- service.yaml
+- configMap.yaml
+

@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hermes-discovery
+  labels:
+    app: hermes-discovery
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hermes-discovery
+  template:
+    metadata:
+      labels:
+        app: hermes-discovery
+    spec:
+      containers:
+      - name: hermes-discovery-container
+        image: gcr.io/chimera-x/hermes-discovery
+        ports:
+        - containerPort: 8080
